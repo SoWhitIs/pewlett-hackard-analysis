@@ -29,7 +29,7 @@ hire_date date
 Titles
 -
 emp_no varchar pk FK >- Employees.emp_no
-title pk
+title varchar pk
 from_date date pk
 to_date date
 
