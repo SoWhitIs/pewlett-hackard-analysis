@@ -29,16 +29,19 @@ Analysis of present employee records (data) to build an employee database via SQ
 ## Results
 
 ### What we can _tell?_
-* Notably, the majority or approximately **64%** of workforce retiring hold senior-level positions, i.e. Senior Engineer, Senior Staff 
+* Notably, the majority or approximately **64%** of workforce retiring hold senior-level positions, i.e., Senior Engineer, Senior Staff.
+
 <p align="center">
   <i><b> Retirement By Title, Count</b></i> 
  </p>
 <p align="center">
   <img src="additionalresources/retirement_titles.png"/>
 </p>
+
 * With a difference of **4,900** employees or **11%**, respectively, there are nearly the same amount Engineering positions as there are Staff positions becoming vacant. 
 
 * Creating a new table ([unquie_titles](data/unique_titles.csv)) to accurately  account for each individual employee, illustrated employees changed positions during their tenure. In fact out of **133, 776** "dups" or duplicate entries ntires on record, over **43,000** employees transitioned to new roles within the company. 
+
 <p align="center">
   <i><b> Multiple Roles</b></i> 
  </p>
@@ -68,7 +71,7 @@ There are close to 94,400 roles slated to re-open. To examine this further, the 
 <p align="center">
   <img src="additionalresources/count_by_title_dept.png"/>
 
-While there is a pool of over 1500 varied and experieced qualified candidates for a potential mentorship program, unfortunately there is simply is _not_ enough to service the influx of Pewlett Hackard's expectant tally of new-hires. 
+While there is a pool of over 1500 varied and experieced qualified candidates for a potential mentorship program, unfortunately there is,simply,  _not_ enough to service the influx of Pewlett Hackard's expectant tally of new-hires. 
  
 A recommendation would be to expand the mentorship criteria to garner like candidates, who perhaps, have been with the company for shorter amount years (i.e., 5 to 15 years), widen the birthdate range, or even reach out to those who have since, or in recent retired. 
 
