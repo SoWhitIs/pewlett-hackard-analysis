@@ -10,7 +10,12 @@ ORDER BY _____, _____ DESC;
 
 
 
---Retiring Employees By Title
+--check tables: Employees, titles
+SELECT * FROM employees
+SELECT * FROM titles
+
+-- Delieverable 1:
+-- Querry: Retiring Employees By Title
 --Create table for retirement titles by employees
 SELECT e.emp_no, e.first_name, e.last_name,
 t.title, t.from_date, t.to_date
@@ -24,7 +29,7 @@ ORDER BY e.emp_no;
 --check table
 SELECT * FROM retirement_titles;
 
--- Create "Unique" titles tables, filter through duplicates 	
+-- Query: Create "Unique" titles tables, filter through duplicates 	
 -- Use Dictinct with Orderby to remove duplicate rows
 SELECT DISTINCT ON (emp_no) emp_no,
 first_name, 
@@ -36,3 +41,16 @@ ORDER BY emp_no ASC, to_date DESC;
 
 --check table
 SELECT * FROM unique_titles;
+
+--Query: Retireve number of Employees by most recent job title, create table
+SELECT COUNT (title), title
+INTO retiring_titles
+FROM unique_titles
+GROUP BY title
+ORDER BY COUNT (title) DESC;
+
+--check table
+SELECT * FROM retiring_titles;
+
+-- 
+-- 
