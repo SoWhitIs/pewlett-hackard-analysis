@@ -52,7 +52,7 @@ Analysis of present employee records (data) to build an employee database via SQ
  
 ## Summary 
 
-There are close to 94,400 roles slated to re-open. To examine this further, the following script was created (to construct a new table) to gain additional insights as to which titles, per department by (pending) retiree count. Full breakdown of retiring by department and title count [here.](data/_retiring_dept.csv). 
+There are close to 94,400 roles slated to re-open. To examine this further, the following script was created (to construct a new table) to gain additional insights as to which titles, per department by (pending) retiree count. Full breakdown of retiring by department and title count [here.](data/_retiring_dept.csv) 
 
     --Filter Per Department, by Title, by Count
 
