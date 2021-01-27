@@ -24,7 +24,7 @@ Analysis of present employee records (data) to build an employee database via SQ
 
 • Scripts: [Queries](https://github.com/SoWhitIs/pewlett-hackard-analysis/tree/main/queries) folder
 
-• Software: PostgreSQL | pgAdmin | [Quick DBD](quickdatabasediagrams.com)
+• Software: PostgreSQL | pgAdmin | [Quick DBD](quickdatabasediagrams.com) | Visual Studio Code, 1.52. 1
 
 ## Results
 
