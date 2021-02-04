@@ -81,7 +81,7 @@ There are close to 94,400 roles slated to re-open. To examine this further, scri
 <p align="center">
   <img src="additionalresources/retiree_by_title_dept.png"/>
 
-While there is a pool of over 1500  varied and experieced qualified candidates for a potential mentorship program, unfortunately there is, simply,  _not_ enough to service the influx of Pewlett Hackard's expectant tally of new-hires(further details,[here](data/dept_title_retire.csv)). 
+While there is a pool of over 1500  varied and experieced qualified candidates for a potential mentorship program, unfortunately there is, simply,  _not_ enough to service the influx of Pewlett Hackard's expectant tally of new-hires(further details, [here](data/dept_title_retire.csv)). 
  
 A recommendation would be to expand the mentorship criteria to garner like candidates, who perhaps, have been with the company for shorter amount years (i.e., 5 to 15 years), widen the birthdate range, or even reach out to those who have since, or in recent retired. 
 
