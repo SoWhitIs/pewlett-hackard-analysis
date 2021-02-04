@@ -67,14 +67,3 @@ ON (e.emp_no=t.emp_no)
 WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 	AND (de.to_date ='9999-01-01')
 ORDER BY e.emp_no;
-
--- Deliverable 3: Filter Per Department, by Title, By Count
--- Additional Script
-    SELECT COUNT(ut.emp_no), ut.title, d.dept_name 
-    INTO retiring_dept
-    FROM unique_titles as ut
-    INNER JOIN dept_emp as de
-    ON (ut.emp_no=de.emp_no)
-    INNER JOIN departments as d
-    ON (de.dept_no = d.dept_no)
-    GROUP BY (d.dept_name, ut.title);
