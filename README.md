@@ -52,26 +52,36 @@ Analysis of present employee records (data) to build an employee database via SQ
  
 ## Summary 
 
-There are close to 94,400 roles slated to re-open. To examine this further, the following script was created (to construct a new table) to gain additional insights as to which titles, per department by (pending) retiree count. Full breakdown of retiring by department and title count [here.](data/_retiring_dept.csv) _(Data may contain duplicate counts.)_
+There are close to 94,400 roles slated to re-open. To examine this further, scripts were created (to construct additional tables table) to gain additional insights as to which titles, per department by (pending) retiree count. Full breakdown of the former found, [here.](data/dept_title_5255.csv) _(Data may contain duplicate counts.)_
 
-    --Filter Per Department, by Title, by Count
+  
+    -- Retirement Per Department, by Title, by Count, (Based on employees born between January 1, 1952 and December 31, 1955)
 
-    SELECT COUNT(ut.emp_no), ut.title, d.dept_name 
-    INTO retiring_dept
-    FROM unique_titles as ut
-    INNER JOIN dept_emp as de
-    ON (ut.emp_no=de.emp_no)
-    INNER JOIN departments as d
-    ON (de.dept_no = d.dept_no)
-    GROUP BY (d.dept_name, ut.title);
+    SELECT DISTINCT ON (e.emp_no) dept_name, e.emp_no 
+    INTO dept_title_A
+    FROM Employees as e
+    JOIN dept_emp as de
+    ON (e.emp_no=de.emp_no)
+    join Departments as d on
+    de.dept_no = d.dept_no
+    WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+    AND (de.to_date ='9999-01-01');
+				   
+    SELECT dt.dept_name , title,  COUNT(dt.emp_no)
+    INTO dept_title_5255
+    FROM dept_title_A as dt
+    JOIN Titles t on
+    dt.emp_no = t.emp_no
+    GROUP BY dept_name , t.title;
 
+   
 <p align="center">
-  <i><b> Retiree Count by Department and Title</b></i> 
+  <i><b> Retiree Count by Department and Title, Snapshot</b></i> 
  </p>
 <p align="center">
-  <img src="additionalresources/count_by_title_dept.png"/>
+  <img src="additionalresources/retiree_by_title_dept.png"/>
 
-While there is a pool of over 1500 varied and experieced qualified candidates for a potential mentorship program, unfortunately there is, simply,  _not_ enough to service the influx of Pewlett Hackard's expectant tally of new-hires. 
+While there is a pool of over 1500  varied and experieced qualified candidates for a potential mentorship program, unfortunately there is, simply,  _not_ enough to service the influx of Pewlett Hackard's expectant tally of new-hires(further details,[here](data/dept_title_retire.csv)). 
  
 A recommendation would be to expand the mentorship criteria to garner like candidates, who perhaps, have been with the company for shorter amount years (i.e., 5 to 15 years), widen the birthdate range, or even reach out to those who have since, or in recent retired. 
 
