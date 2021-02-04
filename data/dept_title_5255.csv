@@ -1,0 +1,43 @@
+dept_name,title,count
+Customer Service,Assistant Engineer,64
+Customer Service,Engineer,564
+Customer Service,Manager,1
+Customer Service,Senior Engineer,545
+Customer Service,Senior Staff,3453
+Customer Service,Staff,3593
+Customer Service,Technique Leader,64
+Development,Assistant Engineer,1649
+Development,Engineer,12566
+Development,Senior Engineer,11644
+Development,Senior Staff,329
+Development,Staff,360
+Development,Technique Leader,1590
+Finance,Senior Staff,2884
+Finance,Staff,2992
+Human Resources,Manager,1
+Human Resources,Senior Staff,2996
+Human Resources,Staff,3175
+Marketing,Senior Staff,3355
+Marketing,Staff,3510
+Production,Assistant Engineer,1445
+Production,Engineer,10941
+Production,Manager,1
+Production,Senior Engineer,10189
+Production,Senior Staff,390
+Production,Staff,389
+Production,Technique Leader,1458
+Quality Management,Assistant Engineer,400
+Quality Management,Engineer,3124
+Quality Management,Manager,1
+Quality Management,Senior Engineer,2874
+Quality Management,Technique Leader,399
+Research,Assistant Engineer,96
+Research,Engineer,701
+Research,Manager,1
+Research,Senior Engineer,664
+Research,Senior Staff,2835
+Research,Staff,2996
+Research,Technique Leader,94
+Sales,Manager,1
+Sales,Senior Staff,8685
+Sales,Staff,9030
