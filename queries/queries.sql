@@ -224,3 +224,54 @@ WHERE d.dept_name IN ('Sales','Development');
 SELECT * FROM dept_info
 -- INTO retirement_sales_dev
 WHERE dept_name IN ('Sales','Development');
+
+---Additional Analysis: 
+-- breakdown by department, by title count
+--Based on Membership Eligibility, Employees Born Between January 1, 1965 - December 31, 1965
+SELECT DISTINCT ON (e.emp_no)  d.dept_name, e.emp_no 
+INTO dep_title
+FROM Employees as e
+JOIN dept_emp as de
+ON (e.emp_no=de.emp_no)
+JOIN Departments as d on
+de.dept_no = d.dept_no
+WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
+AND (de.to_date ='9999-01-01')
+
+SELECT dt.dept_name , t.title,  COUNT(dt.emp_no) 
+INTO dept_title_retire
+FROM dep_title as dt
+JOIN Titles as t ON
+dt.emp_no = t.emp_no
+GROUP BY dept_name , t.title
+;
+
+-- alternative department by title count:   
+
+    SELECT COUNT(ut.emp_no), ut.title, d.dept_name 
+    INTO retiring_dept
+    FROM unique_titles as ut
+    INNER JOIN dept_emp as de
+    ON (ut.emp_no=de.emp_no)
+    INNER JOIN departments as d
+    ON (de.dept_no = d.dept_no)
+    GROUP BY (d.dept_name, ut.title);
+
+    -- Retirement Per Department, by Title, by Count, (Based on employees born between January 1, 1952 and December 31, 1955)
+
+SELECT DISTINCT ON (e.emp_no) dept_name, e.emp_no 
+INTO dept_title_A
+FROM Employees as e
+JOIN dept_emp as de
+ON (e.emp_no=de.emp_no)
+join Departments as d on
+de.dept_no = d.dept_no
+WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+AND (de.to_date ='9999-01-01');
+			   
+SELECT dt.dept_name , title,  COUNT(dt.emp_no)
+INTO dept_title_5255
+FROM dept_title_A as dt
+JOIN Titles t on
+dt.emp_no = t.emp_no
+GROUP BY dept_name , t.title;
