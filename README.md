@@ -85,6 +85,7 @@ While there is a pool of over 1500  varied and experieced qualified candidates f
  
 A recommendation would be to expand the mentorship criteria to garner like candidates, who perhaps, have been with the company for shorter amount years (i.e., 5 to 15 years), widen the birthdate range, or even reach out to those who have since, or in recent retired. 
 
+---
 #### Author
 
 _Whitney D. Gardner_
